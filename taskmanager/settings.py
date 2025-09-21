@@ -10,7 +10,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-secret-key-change-me")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-ALLOWED_HOSTS = [""]
+ALLOWED_HOSTS = [
+    "django-taskmanager-eqf0.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",

@@ -110,7 +110,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://django-taskmanager-eqf0.onrender.com",
-    "https://your-frontend.vercel.app",
+    "https://react-taskmanager-nu.vercel.app",
 ]
 
 

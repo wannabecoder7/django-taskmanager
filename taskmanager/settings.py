@@ -104,8 +104,13 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 20,
 }
+
 CORS_ALLOWED_ORIGINS = [
-    "https://taskmanager-frontend.vercel.app",
+    "https://your-frontend.vercel.app",
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://django-taskmanager-eqf0.onrender.com",
+    "https://your-frontend.vercel.app",
 ]
 
 

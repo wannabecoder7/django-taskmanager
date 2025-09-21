@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-secret-key-change-me")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [""]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -99,10 +99,10 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 20,
 }
+CORS_ALLOWED_ORIGINS = [
+    "https://taskmanager-frontend.vercel.app",
+]
 
-CORS_ALLOW_ALL_ORIGINS = True
-# or specify:
-# CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "http://localhost:3000"]
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
